@@ -1,0 +1,19 @@
+{
+  "name": "html-constructor",
+  "version": "1.0.0",
+  "description": "myapp",
+  "main": "app.js",
+  "scripts": {
+    "serve": "parcel ./src/index.html -p 4200 --open",
+    "build": "parcel build ./src/index.html --no-source--maps"
+  },
+  "keywords": [
+    "js",
+    "javascript"
+  ],
+  "author": "Viacheslav",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.6.2"
+  }
+}
