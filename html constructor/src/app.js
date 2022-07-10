@@ -1,8 +1,5 @@
-import {model} from './module'
 import './style.css'
-import {Site} from './class/site'
-import { Sidebar } from './class/sidebar'
+import {App} from './class/app'
+import {model} from './module'
 
-const site = new Site('#site')
-site.render(model)
-const sidebar = new Sidebar('#panel')
+new App(model).init()
