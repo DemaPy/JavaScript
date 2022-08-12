@@ -1,10 +1,10 @@
 # JavaScript
 In this foler you can find my JS practic part
 
-#Web3Wallet#
+<h1>Web 3 Wallet</h1>
 
 Some functionality of metamask wallet, like <b>getBalance</b> | <b>sentTransactionBnb</b> | <b>sentTransactionToken</b>
 
-#Web3Js#
+<h1>Web 3 JS</h1>
 
 Some file where you can find elements of real projects.
