@@ -1,7 +1,8 @@
 import { App,EthereumRequest } from "./utils/classes.js";
 import { vars } from "./utils/vars.js";
-import { AddRemoveStyles } from "./utils/styleApp.js";
+import { AddRemoveStyles, ClearInputs } from "./utils/styleApp.js";
 import { isValid } from "./utils/validation.js";
+import { abiBUSD } from "../myWeb3Site/utils/abiBusd.js";
 
 const app = new App()
 const request = new EthereumRequest()
@@ -54,17 +55,41 @@ app.id('balance').addEventListener('click', async () => {
 
 
 app.id('sendBnb').addEventListener('click', async () => {
+
     const to = app.id('to').value.trim()
     const amount = app.id('amount').value.trim()
+
     if (isValid(to) && isValid(amount)) {
+
         const sendBnb = await request.sendTransaction(vars.account, to, amount)
-        return alert(`Transaction hash: ${sendBnb.data}`)
+        const data = await sendBnb.data
+        return alert(`Transaction hash: ${data}`)
     }
-    app.id('to').value = ''
-    app.id('amount').value = ''
+    ClearInputs.clearInputs()
 })
 
 
 app.id('sendToken').addEventListener('click', async () => {
-    
+
+    const to = app.id('to').value.trim()
+    const amount = app.id('amount').value.trim()
+
+    if (isValid(to) && isValid(amount) && window.ethereum.chainId == vars.chainIds[3].id) {
+
+        let busd = new ethers.Contract('0xe9e7cea3dedca5984780bafc599bd69add087d56', abiBUSD, vars.signer)
+        let transfer = await busd.transfer(to, amount+'000000000000000000')
+        let tx = await transfer.data
+
+        ClearInputs.clearInputs()
+
+        return alert(`Transaction hash: ${tx}`)
+    } else {
+        let check = vars.chainIds.map(item => item.id == window.ethereum.chainId ? item.name : '')
+        alert(`Check your Chain. Your chain id is: ${check.join('')} but, should be ${vars.chainIds[3].name}`)
+        request.switchChain(vars.chainIds[3].id)
+    }
+
+
+    app.id('to').value = ''
+    app.id('amount').value = ''
 })
