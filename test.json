@@ -1,0 +1,133 @@
+{
+  "newsletter": [
+      {
+          "type": "landing",
+          "data": {
+              "link": "",
+              "url": ""
+          },
+          "options": {
+              "style": {
+                  "color": ""
+              },
+              "alt": "",
+              "colspan": ""
+          }
+      },
+      {
+          "type": "intro",
+          "data": {
+              "text": "Intro text"
+          },
+          "options": {
+              "style": {
+                  "color": ""
+              },
+              "alt": "",
+              "colspan": ""
+          }
+      },
+      {
+          "type": "product",
+          "data": {
+              "name": "",
+              "link": "",
+              "url": ""
+          },
+          "options": {
+              "style": {
+                  "color": ""
+              },
+              "alt": "",
+              "colspan": ""
+          }
+      },
+      {
+          "type": "title",
+          "data": {
+              "text": ""
+          },
+          "options": {
+              "style": {
+                  "color": ""
+              },
+              "colspan": ""
+          }
+      },
+      {
+          "type": "",
+          "data": {
+              "text": ""
+          },
+          "options": {
+              "style": {
+                  "color": ""
+              },
+              "colspan": ""
+          }
+      },
+      {
+          "type": "category",
+          "data": {
+              "link": "",
+              "url": ""
+          },
+          "content": [
+              {
+                  "type": "title",
+                  "data": {
+                      "text": ""
+                  }
+              },
+              {
+                  "type": "paragraph",
+                  "data": {
+                      "text": ""
+                  }
+              },
+              {
+                  "type": "product",
+                  "data": {
+                      "name": "",
+                      "link": "",
+                      "url": "",
+                      "alt": ""
+                  }
+              },
+              {
+                  "type": "product",
+                  "data": {
+                      "name": "",
+                      "link": "",
+                      "url": "",
+                      "alt": ""
+                  }
+              },
+              {
+                  "type": "product",
+                  "data": {
+                      "name": "",
+                      "link": "",
+                      "url": "",
+                      "alt": ""
+                  }
+              },
+              {
+                  "type": "product",
+                  "data": {
+                      "name": "",
+                      "link": "",
+                      "url": "",
+                      "alt": ""
+                  }
+              }
+          ],
+          "options": {
+              "style": {
+                  "color": ""
+              },
+              "alt": "",
+              "colspan": ""
+          }
+      },
+  ]}
