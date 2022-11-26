@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+        }
+        div {
+            display: flex;
+            place-content: center;
+            height: 100%;
+        }
+        h1 {
+            margin: auto;
+            font-size: 7rem;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        .char {
+            transform: translateY(70px);
+            transition: all .5s ease-in-out;
+            opacity: 0;
+        }
+
+        .active {
+            transform: translateY(0px);
+            opacity: 1;
+            transition: all 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="text">Demchenko</h1>
+    </div>
+    <script>
+        const text = document.querySelector('#text')
+
+        function splitText(text) {
+            const textArr = text.textContent.split('')
+            loopCreateElement(textArr)
+        }
+
+        function loopCreateElement(arr) {
+            text.textContent = ''
+            arr.forEach(char => {
+                const element = document.createElement('div')
+                element.appendChild(document.createTextNode(char))
+                element.classList.add('char')
+                element.style.display = 'inline-block'
+                text.appendChild(element)
+            })
+        }
+
+        onload = animate
+
+        function animate() {
+            const letters = document.querySelectorAll('.char')
+            letters.forEach((char, index) => {
+                char.classList.add('active')
+                char.style.transitionDelay = `${index/10}s`
+            })
+        }
+
+        splitText(text)
+
+    </script>
+</body>
+</html>
