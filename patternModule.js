@@ -23,8 +23,6 @@ const myModule = (() => {
     }
 })()
 
-myModule.
-
 myModule.getName()
 myModule.changeName('Dema')
 myModule.getName()
