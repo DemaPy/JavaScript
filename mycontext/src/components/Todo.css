@@ -1,0 +1,44 @@
+.todoContainer {
+    width: 400px;
+    background-color: #ffeedd;
+    border-radius: 10px;
+    padding: 7px;
+    margin-bottom: 10px;
+
+    text-align: left;
+    cursor: pointer;
+}
+
+.todoContainer > div {
+    flex-grow: 1;
+}
+
+.btnDone {
+    font-size: 1.5rem;
+    background-color: #ffeedd;
+    border: none;
+    --size: 30px;
+
+    width: var(--size);
+    height: var(--size);
+    display: block;
+
+    cursor: pointer;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #ffffff;
+    text-shadow: 1px 1px 1px black;
+
+    transition: background-color .3s ease-in;
+}
+
+.btnDone:hover {
+    background-color: #fcd1a6;
+}
+
+.todoContainer {
+    display: flex;
+}
