@@ -9,8 +9,3 @@ Some file where you can find elements of real projects.
 <h1>Weather App</h1>
 
 Сall to api, get objects and render to HTML template.
-
-<h1>Html Constructor</h1>
-
-Generate HTML template by calling functions with parameters.
-UI interface also included.
